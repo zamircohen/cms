@@ -6,17 +6,18 @@ export default function List() {
     const [list, setList] = useState([])
 
     useEffect(() => {
-        fetch("https://public-api.wordpress.com/rest/v1.1/sites/zamircohen.wordpress.com")
+        fetch(`${process.env.REACT_APP_API_URL}/posts`)
         .then(res => res.json())
-        .then(data => setList(data))
+        .then(data => setList(data.posts))
     }, [])
 
   return (
     <div>
         <h1>List of movies</h1>
-        {
+        { 
+          list && 
                 list.map((item) => {
-                    return <li><Link to={`/${item.id}`}> {item.slug}</Link> </li> 
+                    return <li><Link to={`/${item.ID}`}> {item.slug}</Link> </li> 
                 })
             }
     </div>
