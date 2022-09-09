@@ -13,13 +13,15 @@ export default function List() {
 
   return (
     <div>
-        <h1>List of movies</h1>
+        <div className='main'>
+        <h1>My posts</h1>
         { 
           list && 
                 list.map((item) => {
                     return <li><Link to={`/${item.ID}`}> {item.slug}</Link> </li> 
                 })
             }
+        </div>    
     </div>
   )
 }
