@@ -2,11 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import parse from "html-react-parser";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 export default function Item() {
   const { id } = useParams();
-  let navigate = useNavigate()
+  let navigate = useNavigate();
   const [item, setItem] = useState([]);
 
   useEffect(() => {
@@ -19,9 +19,9 @@ export default function Item() {
   return (
     <div>
       <div className="main">
-      <h1> {item.slug} </h1>
-      {item.content && <div> {parse(item.content)} </div>}
-      <button onClick={() => navigate(-1)}>Back</button> 
+        <h1> {item.slug} </h1>
+        {item.content && <div> {parse(item.content)} </div>}
+        <button onClick={() => navigate(-1)}>Back</button>
       </div>
     </div>
   );
