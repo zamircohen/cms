@@ -18,7 +18,9 @@ export default function List() {
           list.map((item) => {
             return (
               <li>
-                <Link to={`/${item.ID}`}> {item.slug}</Link>{" "}
+                <br />
+                <Link className="link" to={`/${item.ID}`}> {item.title}</Link>{" "}
+                <br />             
               </li>
             );
           })}

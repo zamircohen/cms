@@ -19,7 +19,7 @@ export default function Item() {
   return (
     <div>
       <div className="main">
-        <h1> {item.slug} </h1>
+        <h1> {item.title} </h1>
         {item.content && <div> {parse(item.content)} </div>}
         <button onClick={() => navigate(-1)}>Back</button>
       </div>

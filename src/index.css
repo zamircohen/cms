@@ -35,5 +35,10 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  margin: 50px;
 }
 
+.link {
+  color: black;
+  margin: 150px;
+}
